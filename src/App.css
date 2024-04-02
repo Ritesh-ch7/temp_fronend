@@ -1,0 +1,3 @@
+.active-link {
+    @apply bg-blue-300 rounded-md text-black;
+}
