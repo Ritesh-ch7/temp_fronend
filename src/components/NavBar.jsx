@@ -8,6 +8,9 @@ function NavBar() {
   const [activeLink, setActiveLink] = useState('');
 
   const handleNavLinkClick = (label) => {
+    if(label!='Upload File'){
+      localStorage.removeItem('filename')
+    }
     setActiveLink(label);
   };
 
