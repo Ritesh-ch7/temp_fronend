@@ -24,14 +24,14 @@ const FileUploadPage = ({ messages, sendMessage, setUrl }) => {
       <div className="flex flex-col justify-center items-center">
         {/* <div className="flex flex-col"> */}
           <h2 className="text-3xl font-bold mb-3 ml-40 mr-3">
-            Upload File and Query{" "}
+            Upload File and Query
           </h2>
           <div className="flex flex-col items-center w-full">
             <FileUpload
               onSuccess={handleFileUploadSuccess}
               onStart={handleFileUploadStart}
             />
-          {filename != null && <h3>Uploaded file : {filename}</h3>}
+          {filename != null && <h3> <b>Uploaded file</b> : {filename}</h3>}
             <ChatWindow messages={messages} sendMessage={sendMessage} />
           </div>
         {/* </div> */}

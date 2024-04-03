@@ -12,7 +12,10 @@ const UserInput = ({ sendMessage }) => {
     var inputMessage = input;
     console.log(inputMessage);
     setInput("");
-    await sendMessage(inputMessage);
+    inputMessage = inputMessage.trim();
+    if(inputMessage!=''){
+      await sendMessage(inputMessage);
+    }
     setLoading(false);
 
     inputRef.current?.focus();
