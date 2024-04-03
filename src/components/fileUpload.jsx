@@ -7,7 +7,7 @@ import {useState} from 'react' // Import the SVG file
 class FileUpload extends React.Component {
   // Function to handle file selection
   handleFileUpload = async (event) => {
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
     const file = event.target.files[0]; // Get the selected file
     const formData = new FormData();
 
@@ -17,7 +17,7 @@ class FileUpload extends React.Component {
     try {
       if (this.props.onStart) {
         this.props.onStart(); // Call onStart callback if provided
-        setLoading(true)
+        // setLoading(true)
       }
 
       const response = await axios.post('http://127.0.0.1:8000/api/v1/upload/pdf', formData, {
@@ -29,7 +29,7 @@ class FileUpload extends React.Component {
       localStorage.setItem('filename', response.data.filename);
       if (this.props.onSuccess) {
         this.props.onSuccess(); // Call onSuccess callback if provided
-        setLoading(false)
+        // setLoading(false)
       }
     } catch (error) {
       console.error('Error uploading file:', error);

@@ -10,7 +10,7 @@ const MessageList = ({ messages, loading }) => {
   }, [messages, loading]);
 
   return (
-    <div className="mt-4 overflow-y-auto max-h-[34rem] space-y-4 w-full relative">
+    <div className="mt-4 overflow-y-auto max-h-[25rem] space-y-4 w-full ">
       {messages.map((message, index) => (
         <div
           key={index}
