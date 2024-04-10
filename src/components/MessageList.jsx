@@ -32,9 +32,6 @@ const MessageList = ({ messages, loading }) => {
         </div>
       ))}
       <div ref={messagesEndRef}></div>
-      {/* {loading && (
-        <Loader className="absolute bottom-4 left-1/2 transform -translate-x-1/2" />
-      )} */}
     </div>
   );
 };
