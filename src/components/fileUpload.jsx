@@ -19,8 +19,8 @@ class FileUpload extends React.Component {
         this.props.onStart(); // Call onStart callback if provided
         // setLoading(true)
       }
-
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/upload/pdf', formData, {
+      let session_id = localStorage.session_id;
+      const response = await axios.post(`http://127.0.0.1:8000/api/v1/upload/pdf/${session_id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set content type to multipart/form-data
         },

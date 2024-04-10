@@ -5,11 +5,11 @@ import Loader1 from "./Loader1/Loader1";
 
 const FileUploadPage = ({ messages, sendMessage, setUrl }) => {
   const [fileUploaded, setFileUploaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // State to track loading state
+  const [isLoading, setIsLoading] = useState(false); 
 
   const handleFileUploadSuccess = () => {
-    setIsLoading(false); // Turn off loader
-    setFileUploaded(true); // Set fileUploaded to true after successful upload
+    setIsLoading(false); 
+    setFileUploaded(true);
   };
 
   const handleFileUploadStart = () => {
